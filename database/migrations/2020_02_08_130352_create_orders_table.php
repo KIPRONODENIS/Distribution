@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('product_id');
+            $table->string('location');
             $table->integer('quantity');
             $table->string('phone');
             $table->timestamps();
