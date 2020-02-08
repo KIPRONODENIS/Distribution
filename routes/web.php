@@ -14,7 +14,15 @@
 Route::get('/','WelcomeController@index');
 Route::get('contact', function () {
     return view('contact');
-});Auth::routes();
+});
+
+//Route to order from particular distributor
+
+Route::get('/cart/{product}','OrderController@show');
+Route::post('/order','OrderController@store')->name('order');
+//Route to view Products
+Route::get('/products/{product}','ProductController@show');
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
