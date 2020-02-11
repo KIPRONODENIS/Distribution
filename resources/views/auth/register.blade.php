@@ -67,7 +67,7 @@
      <div class="md:flex md:items-center mb-6">
     
     <label class="md:w-full block text-gray-700 font-bold">
-      <input class="mr-2  py-2 px-3  leading-tight" type="checkbox">
+      <input class="mr-2  py-2 px-3  leading-tight" type="checkbox" name="type" value="distributor">
        <span class="checkmark"></span>
       <span class="text-xl">
         I am a distributor !

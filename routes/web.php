@@ -24,7 +24,7 @@ Route::post('/order','OrderController@store')->name('order');
 
 
 //chat page
-Route::get('chat/{user}','ChatController@show');
+Route::get('/chat/{user}','ChatController@show');
 
 Route::get('/products/{product}','ProductController@show');
 Auth::routes();
