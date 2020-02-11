@@ -21,6 +21,11 @@ Route::get('contact', function () {
 Route::get('/cart/{product}','OrderController@show');
 Route::post('/order','OrderController@store')->name('order');
 //Route to view Products
+
+
+//chat page
+Route::get('chat/{user}','ChatController@show');
+
 Route::get('/products/{product}','ProductController@show');
 Auth::routes();
 

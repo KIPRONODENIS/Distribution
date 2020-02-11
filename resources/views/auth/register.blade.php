@@ -61,7 +61,23 @@
                             </label>
 
                             <input id="password-confirm" type="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="password_confirmation" required autocomplete="new-password">
+                        </div> 
+
+                   <div class="flex flex-wrap mb-6">
+     <div class="md:flex md:items-center mb-6">
+    
+    <label class="md:w-full block text-gray-700 font-bold">
+      <input class="mr-2  py-2 px-3  leading-tight" type="checkbox">
+       <span class="checkmark"></span>
+      <span class="text-xl">
+        I am a distributor !
+      </span>
+    </label>
+  </div>
                         </div>
+
+
+ 
 
                         <div class="flex flex-wrap">
                             <button type="submit" class="inline-block align-middle text-center select-none border font-bold whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700">

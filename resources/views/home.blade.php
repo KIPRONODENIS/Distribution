@@ -19,7 +19,9 @@
 
                 <div class="w-full p-6">
                     <p class="text-gray-700">
-                        You are logged in!
+                        @role('admin')
+     "You are and admin boy"
+                        @endrole
                        
                     </p>
                 </div>
