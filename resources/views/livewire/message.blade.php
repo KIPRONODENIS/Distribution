@@ -7,21 +7,20 @@
           <div class="msg_history">
           @if(count($all)>0) 
 
-    
 @foreach($all as $msg)
- @if($msg[0]["sender_id"]==1)
+ @if($msg["sender_id"]==1)
             <div class="incoming_msg">
               <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
               <div class="received_msg">
                 <div class="received_withd_msg">
-                  <p>{{$msg[0]["message"]}}</p>
+                  <p>{{$msg["message"]}}</p>
                   <span class="time_date"> 11:01 AM    |    June 9</span></div>
               </div>
             </div>
     @else
             <div class="outgoing_msg">
               <div class="sent_msg">
- <p>{{$msg[0]["message"]}}</p>
+ <p>{{$msg["message"]}}</p>
                 <span class="time_date"> 11:01 AM    |    June 9</span> </div>
             </div>
 

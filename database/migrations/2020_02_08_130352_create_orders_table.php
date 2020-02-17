@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->string('location');
             $table->integer('total');
             $table->integer('quantity');
+            $table->string('status')->default('pending');
             $table->string('phone');
             $table->timestamps();
         });
