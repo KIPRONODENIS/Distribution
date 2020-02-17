@@ -14,7 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products=Product::simplePaginate(8);
+
+        return  view('Pages.products',compact('products'));
     }
 
     /**

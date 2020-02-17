@@ -38,10 +38,10 @@
                                 <a class="no-underline hover:underline text-gray-300 text-sm p-3" href="{{ route('register') }}">{{ __('Register') }}</a>
                             @endif
                         @else
-                           <a href="{{ route('logout') }}"
+                           <a href="/products"
                                class="no-underline hover:underline text-gray-300 text-sm p-3"
-                               >{{ __('Distributors') }}</a>
-                            <a href="{{ route('logout') }}"
+                               >{{ __('Products') }}</a>
+                            <a href="/"
                                class="no-underline hover:underline text-gray-300 text-sm p-3"
                               >{{ __('Home') }}</a>
 

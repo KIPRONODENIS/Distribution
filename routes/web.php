@@ -21,10 +21,10 @@ Route::get('contact', function () {
 Route::get('/cart/{product}','OrderController@show');
 Route::post('/order','OrderController@store')->name('order');
 //Route to view Products
-
+Route::get('/products','ProductController@index');
 
 //chat page
-Route::get('/chat/{user}','ChatController@show');
+Route::get('/chat/{user}','ChatController@show')->middleware('auth');
 
 Route::get('/products/{product}','ProductController@show');
 Auth::routes();
