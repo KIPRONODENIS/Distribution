@@ -52,11 +52,25 @@
   Become Supplier
 </a>
                     </li>
- -->                    <li class="inline pr-8 w-full">
+
+
+ -->                
+@guest
+     <li class="inline pr-8 w-full">
 <a  href="{{route('register')}}" class="bg-teal-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
   Create an account
 </a>
                     </li>
+
+@else 
+     <li class="inline pr-8 w-full">
+<a  href="{{route('home')}}" class="bg-teal-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+  Dashboard
+</a>
+                    </li>
+
+
+@endguest
                    
                 </ul>
             </div>

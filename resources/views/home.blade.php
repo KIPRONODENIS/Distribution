@@ -20,10 +20,10 @@
                 <div class="w-full p-6">
                     <p class="text-gray-700">
                         @role('distributor')
-     "I got you buddy"
+   @include('partials.distributor')
                         @endrole
 
-                        You now life is challengig
+                 @include('partials.client')
                        
                     </p>
                 </div>
