@@ -8,8 +8,8 @@
                 <h1 class="text-white text-center font-light tracking-wider text-5xl mb-6">
                     {{ config('app.name', 'Laravel') }}
                 </h1>
-                <p class="text-sm text-white text-center my-3">The no 1 Leading platform for suppliers and distributors</p>
-                <ul class="list-reset text-center py-5">
+                <p class="text-sm text-white  my-3">The no 1 Leading platform for suppliers and distributors</p>
+                <ul class="list-reset  py-5 mb-5">
 <!--                     <li class="inline pr-8">
                        <a href="#"  class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
   Become Supplier

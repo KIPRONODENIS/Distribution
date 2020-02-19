@@ -33,4 +33,12 @@ class OrderController extends Controller
     	return view('Order.update',compact('order'));
 
     }
+
+
+    //store the update
+    public function storeUpdate(Order $order) {
+
+        return request()->json($order);
+
+    }
 }

@@ -11,7 +11,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <link href="{{ mix('css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/@fortawesome/fontawesome-free/css/all.min.css">
 <!-- slider -->
@@ -38,12 +38,13 @@
                                 <a class="no-underline hover:underline text-gray-300 text-sm p-3" href="{{ route('register') }}">{{ __('Register') }}</a>
                             @endif
                         @else
+                                                    <a href="/"
+                               class="no-underline hover:underline text-gray-300 text-sm p-3"
+                              >{{ __('Home') }}</a>
                            <a href="/products"
                                class="no-underline hover:underline text-gray-300 text-sm p-3"
                                >{{ __('Products') }}</a>
-                            <a href="/"
-                               class="no-underline hover:underline text-gray-300 text-sm p-3"
-                              >{{ __('Home') }}</a>
+
 
                             <span class="text-gray-300 text-sm pr-4">{{ Auth::user()->name }}<i class="far fa-user"></i></span>
                             <a href="{{ route('logout') }}"
