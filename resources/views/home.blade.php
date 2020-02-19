@@ -21,9 +21,11 @@
                     <p class="text-gray-700">
                         @role('distributor')
    @include('partials.distributor')
+               @else
+                @include('partials.client')
                         @endrole
 
-                 @include('partials.client')
+                
                        
                     </p>
                 </div>

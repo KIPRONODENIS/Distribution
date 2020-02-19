@@ -20,6 +20,8 @@ Route::get('contact', function () {
 
 Route::get('/cart/{product}','OrderController@show');
 Route::post('/order','OrderController@store')->name('order');
+//route to update and order
+Route::get('/order/{order}/update','OrderController@update')->name('order.update');
 //Route to view Products
 Route::get('/products','ProductController@index');
 
@@ -27,6 +29,7 @@ Route::get('/products','ProductController@index');
 Route::get('/chat/{user}','ChatController@show')->middleware('auth');
 
 Route::get('/products/{product}','ProductController@show');
+Route::get('order-success','OrderController@success');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

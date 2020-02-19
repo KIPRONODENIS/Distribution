@@ -19,8 +19,8 @@ $this->all=$all;
 	public function sending() {
 
 	$this->chat= Chat::create([
-       'sender_id'=>2,
-       'receiver_id'=>1,
+       'sender_id'=>1,
+       'receiver_id'=>2,
        'message'=>$this->message
        ])->toArray();
        	

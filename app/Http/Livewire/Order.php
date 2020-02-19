@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-
+use App\Order as UserOrder;
 class Order extends Component
 {
 
@@ -40,6 +40,22 @@ class Order extends Component
         ]);
 
 $this->total();
+
+$order=UserOrder::create([
+'user_id'=>\Auth::id(),
+'product_id'=>$this->product['id'],
+'location'=>$this->location,
+'total'=>$this->total,
+'quantity'=>$this->quantity,
+'phone'=>$this->phone
+
+]);
+
+
+
+
+$this->redirect('/order-success');
+
         // Execution doesn't reach here if validation fails.
 
         // Contact::create([
