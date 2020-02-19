@@ -1,5 +1,5 @@
       
-                        <div class="w-1/3 my-2 shadow-sm hover:bg-gray-500">
+                        <div class=" border-solid border-3 border-gray-600  w-1/3 px-3 my-2 ">
                             <div class="col-item">
                                 <div class="photo w-full">
                                     <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
@@ -7,7 +7,7 @@
                                 <div class="info">
                                     <div class="row">
                                         <div class="price col-md-12">
-                                            <h4 class="card-title">
+                                            <h4 class="card-title ">
                                                {{$product->name}}</h5>
                                             <h4 class="my-2 price-text-color">
                                                 ${{$product->price}} per {{$product->per}}</h5>

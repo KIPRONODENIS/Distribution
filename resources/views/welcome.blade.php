@@ -61,7 +61,7 @@
             <div class="carousel-inner">
  <div class="item active">
 
- <div class="row  flex flex-wrap justify-around">
+ <div class="row  flex flex-wrap justify-between">
 
 @foreach($products as $product)
 

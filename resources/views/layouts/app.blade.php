@@ -15,16 +15,15 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/@fortawesome/fontawesome-free/css/all.min.css">
 <!-- slider -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
 <!-- slider -->
  @livewireStyles
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none">
     <div id="app">
       
-        <nav class="bg-blue-900 shadow mb-8 py-6">
+        <nav class="bg-blue-900 shadow py-6">
             <div class="container mx-auto px-6 md:px-0">
                 <div class="flex items-center justify-center">
                     <div class="mr-6">
