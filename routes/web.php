@@ -23,11 +23,16 @@ Route::post('/order','OrderController@store')->name('order');
 //route to update and order
 Route::get('/order/{order}/update','OrderController@update')->name('order.update');
 //Route to view Products
+//view specified product 
+Route::get('/product/{product}','ProductController@view')->name('product.show');
 Route::get('/products','ProductController@index');
 //route to create new product
 Route::get('/products/new','ProductController@create')->name('product.create');
 //post route to create product
 Route::post('/product/store','ProductController@store')->name('product.store');
+//Route to show edit view
+Route::get('/product/{product}/edit','ProductController@edit')->name('product.edit');
+Route::put('/product/{product}','ProductController@update')->name('product.update');
 //chat page
 Route::get('/chat/{user}','ChatController@show')->middleware('auth');
 

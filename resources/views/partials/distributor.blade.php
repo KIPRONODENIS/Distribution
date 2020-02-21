@@ -61,8 +61,8 @@
 				<td  class="flex justify-around">
 					
 				
-					<a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-2 rounded"><i class="fas fa-eye"></i></a>
-					<a href="#" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-2 rounded"></i><i class="fas fa-pen-square"></i></a>
+					<a href="{{route('product.show',$product->id)}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-2 rounded"><i class="fas fa-eye"></i></a>
+					<a href="{{route('product.edit',$product->id)}}" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-2 rounded"><i class="fas fa-pen-square"></i></a>
 					<a href="#" class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-2 rounded"><i class="fas fa-trash-alt"></i></a>
 				</td>
 			</tr>
@@ -72,3 +72,4 @@
 	</table>
 	</div>
 </div>
+

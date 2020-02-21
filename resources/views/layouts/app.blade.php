@@ -16,7 +16,10 @@
     <link rel="stylesheet" type="text/css" href="/@fortawesome/fontawesome-free/css/all.min.css">
 <!-- slider -->
 <link href="/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+<style type="text/css">
+    
+    
+</style>
 <!-- slider -->
  @livewireStyles
 </head>

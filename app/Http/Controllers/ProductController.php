@@ -72,6 +72,17 @@ return redirect()->back();
     {
       
         return view('Pages.product',compact('product'));
+    } 
+       /**
+     * Display the specified resource.
+     *
+     * @param  \App\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function view(Product $product)
+    {
+      
+        return view('Products.view',compact('product'));
     }
 
     /**
@@ -82,7 +93,7 @@ return redirect()->back();
      */
     public function edit(Product $product)
     {
-        //
+       return view('Products.edit',compact('product'));
     }
 
     /**
@@ -94,7 +105,16 @@ return redirect()->back();
      */
     public function update(Request $request, Product $product)
     {
-        //
+    $data=$request->except('_method','_token');
+    //update;
+   $updated= $product->update($data);
+
+   if($updated) {
+    session()->flash('success',"Successfully Updated");
+   }
+
+  return  redirect()->back();
+
     }
 
     /**
