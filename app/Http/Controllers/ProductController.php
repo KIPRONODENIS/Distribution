@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -26,7 +28,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('Products.create');
     }
 
     /**
@@ -37,7 +39,27 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+$path = $request->file('image')->store('avatars',['disk'=>'public']);
+   
+      $product=new Product([
+'name'=>$request->name,
+'min_order'=>$request->min_order,
+'per'=>$request->per,
+'image'=>$path,
+'description'=>$request->description,
+'price'=>$request->price,
+'stock'=>$request->stock
+
+      ]);
+
+
+$user=\Auth::user();
+
+$saved=$user->products()->save($product);
+
+session()->flash('success','You successfully Added a Product');
+
+return redirect()->back();
     }
 
     /**

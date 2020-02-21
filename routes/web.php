@@ -24,7 +24,10 @@ Route::post('/order','OrderController@store')->name('order');
 Route::get('/order/{order}/update','OrderController@update')->name('order.update');
 //Route to view Products
 Route::get('/products','ProductController@index');
-
+//route to create new product
+Route::get('/products/new','ProductController@create')->name('product.create');
+//post route to create product
+Route::post('/product/store','ProductController@store')->name('product.store');
 //chat page
 Route::get('/chat/{user}','ChatController@show')->middleware('auth');
 

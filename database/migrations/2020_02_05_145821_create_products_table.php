@@ -18,9 +18,10 @@ class CreateProductsTable extends Migration
             $table->mediumText('name');
             $table->integer('min_order');
             $table->integer('price');
+            $table->integer('stock');
             $table->unsignedBigInteger('user_id');
             $table->string('image');
-            $table->string('per');
+            $table->string('per')->default('item');
             $table->longText('description');
             $table->boolean('instock')->default(true);
             $table->timestamps();
