@@ -11,16 +11,19 @@ public $all;
 public $message;
 
 public $chat;
-	public function mount($all){
+public $id;
+	public function mount($all,$user){
+
 $this->all=$all;
+$this->id=$user->id;
 
 	}
 
-	public function sending() {
+	public function sending($id) {
 
 	$this->chat= Chat::create([
        'sender_id'=>1,
-       'receiver_id'=>2,
+       'receiver_id'=>$id,
        'message'=>$this->message
        ])->toArray();
        	

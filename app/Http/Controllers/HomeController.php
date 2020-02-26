@@ -23,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+         if(\Auth::user()->hasRole('admin')) {
+        return redirect('/admin');
+         
+        }
         $orders=\Auth::user()->orders;
         $products=[];
         if(\Auth::user()->hasRole('distributor')) {

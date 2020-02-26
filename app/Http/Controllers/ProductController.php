@@ -108,7 +108,10 @@ return redirect()->back();
     $data=$request->except('_method','_token');
     //update;
    $updated= $product->update($data);
-
+    
+    if($request->hasFile('image')) {
+        $product->update(['image'=>$request->file('image')->store('avatars',['disk'=>'public'])]);
+    }
    if($updated) {
     session()->flash('success',"Successfully Updated");
    }
@@ -125,6 +128,10 @@ return redirect()->back();
      */
     public function destroy(Product $product)
     {
-        //
+       $product->delete();
+
+       session()->flash('success','Successfully deleted a product');
+
+        return redirect()->back();
     }
 }

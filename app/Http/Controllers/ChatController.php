@@ -37,8 +37,9 @@ foreach($nonsorted as $item){
 	$all[]=$item->toArray();
 }
 
+$contact=$user;
 
- return view('Pages.chat',compact('all'));
+ return view('Pages.chat',compact('contact'));
     }
 
 

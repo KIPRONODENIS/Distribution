@@ -24,7 +24,7 @@
  @livewireStyles
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none">
-    <div id="app">
+    <div>
       
         <nav class="bg-blue-900 shadow py-6">
             <div class="container mx-auto px-6 md:px-0">
@@ -39,6 +39,10 @@
                             <a class="no-underline hover:underline text-gray-300 text-sm p-3" href="{{ route('login') }}">{{ __('Login') }}</a>
                             @if (Route::has('register'))
                                 <a class="no-underline hover:underline text-gray-300 text-sm p-3" href="{{ route('register') }}">{{ __('Register') }}</a>
+
+                                                           <a href="/products"
+                               class="no-underline hover:underline text-gray-300 text-sm p-3"
+                               >{{ __('Products') }}</a>
                             @endif
                         @else
                                                     <a href="/"
@@ -47,7 +51,9 @@
                            <a href="/products"
                                class="no-underline hover:underline text-gray-300 text-sm p-3"
                                >{{ __('Products') }}</a>
-
+                                                    <a href="{{route('home')}}"
+                               class="no-underline hover:underline text-gray-300 text-sm p-3"
+                               >{{ __('Dashboard') }}</a>
 
                             <span class="text-gray-300 text-sm pr-4">{{ Auth::user()->name }}<i class="far fa-user"></i></span>
                             <a href="{{ route('logout') }}"
@@ -61,7 +67,7 @@
                     </div>
                 </div>
             </div>
->
+
         </nav>
 
         @yield('content')

@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" id="app">
 <h3 class=" text-center">Messaging</h3>
 
-@livewire('message',$all)
+<chat-app :user="{{auth()->user()}}" :contact="{{$contact}}"></chat-app>
 
 
 

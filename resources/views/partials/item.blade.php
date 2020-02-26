@@ -2,7 +2,7 @@
                         <div class=" border-solid border-3 border-gray-600 shadow-sm w-1/3 px-3 my-2 ">
                             <div class="col-item">
                                 <div class="photo w-full">
-                                    <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                    <img src="{{asset('/storage/'.$product->image)}}" class="img-responsive" alt="a" />
                                 </div>
                                 <div class="info">
                                     <div class="row">

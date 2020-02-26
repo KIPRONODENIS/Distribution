@@ -10,6 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/msg',function(){
+	$contact=\App\User::find(2);
+return view('messenger',compact('contact'));
+})->middleware('auth');
+
+Route::get('/conversation/{id}','ContactController@conversation');
+
+Route::post('chat/conversation/send','ContactController@send');
+Route::get('/contacts','ContactController@get');
+//chat page
+Route::get('/chat/{user}','ChatController@show')->middleware('auth');
+
+
 
 Route::get('/','WelcomeController@index');
 Route::get('contact', function () {
@@ -33,8 +46,7 @@ Route::post('/product/store','ProductController@store')->name('product.store');
 //Route to show edit view
 Route::get('/product/{product}/edit','ProductController@edit')->name('product.edit');
 Route::put('/product/{product}','ProductController@update')->name('product.update');
-//chat page
-Route::get('/chat/{user}','ChatController@show')->middleware('auth');
+Route::get('/product/{product}/remove','ProductController@destroy')->name('product.delete');
 
 Route::get('/products/{product}','ProductController@show');
 Route::get('order-success','OrderController@success');
@@ -42,3 +54,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Lest get into admin routes 
+Route::get('/admin','AdminController@index');

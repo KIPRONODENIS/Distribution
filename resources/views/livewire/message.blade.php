@@ -8,7 +8,7 @@
           @if(count($all)>0) 
 
 @foreach($all as $msg)
- @if($msg["sender_id"]==1)
+ @if($msg["sender_id"]==\Auth::user()->id)
             <div class="incoming_msg">
               <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
               <div class="received_msg">
@@ -35,7 +35,7 @@
             <div class="input_msg_write">
               <input type="text" class="write_msg" name="smg" placeholder="Type a message" wire:model='message'/>
 
-              <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true" wire:click="sending()">send</i></button>
+              <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true" wire:click="sending({{$id}})">send</i></button>
             </div>
           </div>
         </div>

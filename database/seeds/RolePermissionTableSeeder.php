@@ -25,9 +25,12 @@ class RolePermissionTableSeeder extends Seeder
         $role->givePermissionTo('create supply');
 
           $role = Role::create(['name' => 'super-admin']);
-        $role->givePermissionTo(Permission::all());
+          $role->givePermissionTo(Permission::all());
 
-           $user=\App\User::first()->assignRole("distributor");
+           $role = Role::create(['name' => 'admin']);
+          $role->givePermissionTo(Permission::all());
+
+           $user=\App\User::first()->assignRole("admin");
 
 
     }
