@@ -55,4 +55,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Lest get into admin routes 
-Route::get('/admin','AdminController@index');
+Route::get('/admin','AdminController@index')->name('admin.home');
+Route::get('/admin/users','AdminController@users')->name('admin.users');
+Route::get('/admin/products','AdminController@products')->name('admin.products');
+Route::get('/admin/orders','AdminController@orders')->name('admin.orders');

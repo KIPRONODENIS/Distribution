@@ -17,14 +17,15 @@
 <!-- slider -->
 <link href="/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <style type="text/css">
-    
+  
     
 </style>
 <!-- slider -->
+
  @livewireStyles
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none">
-    <div>
+    <div id="app">
       
         <nav class="bg-blue-900 shadow py-6">
             <div class="container mx-auto px-6 md:px-0">

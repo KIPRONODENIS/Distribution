@@ -1,7 +1,8 @@
 <div>
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
 
-   	                    <form class="w-full p-6" wire:submit.prevent="submit">
+
+                        <form class="w-full p-6" wire:submit.prevent="submit">
                         @csrf
                   
                         <div class="flex flex-wrap mb-6">
@@ -59,9 +60,7 @@
                             </button>
                   <input type="hidden" wire:model="product_id" name="id" value="{{$product['id']}}">
        
-    <div wire:loading>
-       <img src="/images/loading.gif" class="w-1/4 h-50 ">
-    </div>
+
        Your Total {{$total}}
      
                         </div>
